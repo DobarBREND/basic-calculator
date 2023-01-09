@@ -78,9 +78,9 @@ getDivider(number) {
         if(isNaN(intNumber)) {
             intDisplay = ""
         } else {
-            intDisplay = intNumber.toLocaleString("en", {maximumFractionDigits: 0})
+            intDisplay = intNumber.toLocaleString("en", { maximumFractionDigits: 0 })
         }
-        if(isNaN(decNumber != null)) {
+        if(decNumber != null) {
             return `${intDisplay}.${decNumber}`
         } else {
             return intDisplay
