@@ -1,0 +1,111 @@
+:root {
+    --main-color1: #0FC2C0; /*RGB 54, 191, 177*/
+    --main-color2: #038C73; /*RGB 3, 140, 115*/
+    --main-color3: #008F8C; /*RGB 2, 115, 94*/
+    --main-color4: #015958; /*RGB 1, 64, 52*/
+    --main-color5: #023535; 
+    --main-color6: #0D0D0D; /*RGB 13, 13, 13*/
+    --main-color7: WhiteSmoke;
+    
+
+}
+
+*, *::before, *::after {
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(
+    90deg,    
+    var(--main-color4) 0%,
+    var(--main-color3) 30%,
+    var(--main-color3) 70%,
+    var(--main-color4) 100%
+    )
+}
+
+.calc-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(6, 80px);
+}
+
+button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid var(--main-color5);
+    border-radius: 5px;
+    color: var(--main-color5);
+    background-color: var(--main-color6);
+    box-shadow: inset 0px 0px 5px 2px rgba(255,255,255,0.9);
+    outline: none;
+    color: var(--main-color1);
+}
+
+button:hover {
+    background-color: rgba(54, 191, 177, 0.5);
+    box-shadow: inset 0px 0px 8px rgba(0,0,0,0.9);
+    color: var(--main-color6);
+}
+
+.span-two {
+    grid-column: span 2;
+    padding: 0px;
+}
+
+.calc-screen {
+    grid-column: 1 / -1;
+    background-color: var(--main-color5);
+    background: linear-gradient(
+        180deg, 
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.5) 60%,
+        rgba(0, 0, 0, 0.5) 80%,
+        rgba(0, 0, 0, 0.9) 100%);
+    border: 1px solid WhiteSmoke;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 10px 25px;
+    margin-bottom: 3px;
+    color: var(--main-color5);
+    box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.9);
+    word-wrap: break-word;
+    word-break: break-all;
+    min-height: 150px;
+    z-index: 1;
+}
+
+.previous-operand {
+    color: var(--main-color1);
+    font-size: 1.4rem;
+    opacity: 0.65;
+}
+
+.current-operand {
+    color: var(--main-color1);
+    font-size: 2.4rem;
+}
+   
+
+.span-four {
+    grid-column: span 4;
+    font-size: 12px;
+    padding: 10px;
+    margin-top: 3px;
+    box-shadow: 0px 0px 5px 5px rgba(255,255,255,0.5);
+    z-index: -1;
+}
+
+sup {
+    font-size: 1.4rem;
+}
